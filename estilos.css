@@ -10,9 +10,9 @@ header {
 	font-family: Roboto;
 	display: flex;
 	justify-content: space-around;
-	padding-top: 50px;
-	padding-bottom: 30px;
-	height: 120px;
+	padding-top: 40px;
+	padding-bottom:40px;
+	height: 60px;
 	width: 100%;
 	background: #00A6D6;
 	color: #FFFF;
@@ -65,17 +65,16 @@ nav ul li a:hover{
 .contenedor{
 	display: flex;
 	justify-content: space-around;
+	padding: 20px;
 }
 .info {
 	font: 100% Roboto;
 	background: #FFF;
-	padding: 15px;
-	margin: 10px;
 	border: 0.5px solid #808080;
 	box-shadow: 5px 5px 5px #606060;
 	border-radius: 2px;
 	width: 460px;
-	height: 332px;
+	height: 364px;
 
 	
 }
@@ -161,5 +160,9 @@ footer a img{
 	background-color: transparent;
 	height: 80px;
 }
-
-
+a{
+	text-decoration: none;
+}
+b{
+	color: gray;
+}

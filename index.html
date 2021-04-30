@@ -11,47 +11,48 @@
     </head>
 
     <body background="images\3254309.jpg">
-        <div class="Titulos">
-            <center>
-            <h1>CONTADOR DE OBJETOS EN TIEMPO REAL</h1>
-            <h3>CON ML5.JS</h3>
-            </center>
-        </div>
-
         <header>
-          <center>
+          
+          <img class="camara" src="images\camara.png">
+          <div class="texto">
+            <h1>CONTADOR DE OBJETOS EN TIEMPO REAL</h1>
+            <h3><center>CON ML5.JS</center> </h3>
+          </div>
+          <img class="logo" src="images\UAO-logo-acreditacion.png">
+        </header>
           <nav>
             <ul>
-              <center>
               <li><a href="index.html">Inicio</a></li>
               <li><a href="Guia.html">Guía</a></li>
-              <li><a href="https://ml5js.org/">Documentación</a></li>
-               </center>
+              <li><a href="https://ml5js.org/"  target="_blank">Documentación</a></li>
             </ul>
           </nav>
-        </center>
-        </header>
-
-        <div class="info">
-        <br>
-        <center><font size="5"><p id='estado'>Carga modelo...</p></font></center><br/><br><br>
-        <p>
-            En este video se muestra:  <strong> <br/><br/>
-            <center><span id="resultado">...</span></center></strong><br/><br/>
-
-            El numero de objetos dectetados es: <strong><br/><br/><br>
-            <center><span id="num_person" class="contador"></span></center></strong><br/>
-        </p>
-        </div>
 
 
-        <div class="videoMarco">
-          <p></p>
-        </div>
+        <div class="contenedor">
+          <div class="videoMarco">
+            <div class="imagenVideo"><img src="images\permitir.png"></div>
+            <p></p>
+          </div>
 
-        <div class="imagenVideo"><img src="images\permitir.png"></div>
-        <div class="Logo"><img src="images\UAO-logo-acreditacion.png" width="100" height="100"></div>
-        <div class="camara"><img src="images\camara.png" width="150" height="100"></div>
+          <div class="info">
+          <br>
+          <center><font size="5"><p id='estado'>Carga modelo...</p></font></center><br/><br><br>
+          <p>
+              En este video se muestra:  <strong> <br/><br/>
+              <center><span id="resultado">...</span></center></strong><br/><br/>
+  
+              El numero de objetos dectetados es: <strong><br/><br/><br>
+              <center><span id="num_person" class="contador"></span></center></strong><br/>
+          </p>
+          </div>
+        </div>  
+    <footer>  
+      <p>
+        Esta pagina fue creada con fines educativos por <a href="github.com" target="_blank"><b>Iván D Duque</b></a>  
+      </p>
+    </footer>
+
 
         <script>
 
@@ -65,7 +66,7 @@
 
             function setup() {
               canvas= createCanvas(680,360);
-              canvas.position(40,250);
+              canvas.position(70,220);
               video = createCapture(VIDEO);
               video.size(680,360);
               
@@ -111,17 +112,6 @@
               });
             }
         </script>
-    
     </body>
-
-    <footer>
-      <center>
-      <p>
-        Esta pagina fue creada con fines educativos por Iván D Duque<br> 
-        Instagram: @ivandduque<br>
-        GitHub: @iDuqueZ
-      </p>
-      </center>
-    </footer>
 
 </html>

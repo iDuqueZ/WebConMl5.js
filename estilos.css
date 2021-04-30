@@ -3,22 +3,6 @@
 	padding: 0px;
 }
 
-.info {
-	font: 100% Roboto;
-	background: #FFF;
-	padding: 15px;
-	margin: 10px;
-	border: 0.5px solid #808080;
-	box-shadow: 5px 5px 5px #606060;
-	border-radius: 2px;
-	width: 460px;
-	height: 332px;
-	position: absolute;
-	top: 238px;
-	left: 765px;
-
-	
-}
 
 header {
 	font: bold;
@@ -28,7 +12,7 @@ header {
 	justify-content: space-around;
 	padding-top: 50px;
 	padding-bottom: 30px;
-	height: 100px;
+	height: 120px;
 	width: 100%;
 	background: #00A6D6;
 	color: #FFFF;
@@ -52,7 +36,9 @@ nav {
 	background: #000;
 	width: 100%;
 	height: 40px;
-	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 nav ul {
@@ -76,23 +62,38 @@ nav ul li a:hover{
 	color: #FFFF;
 }
 
+.contenedor{
+	display: flex;
+	justify-content: space-around;
+}
+.info {
+	font: 100% Roboto;
+	background: #FFF;
+	padding: 15px;
+	margin: 10px;
+	border: 0.5px solid #808080;
+	box-shadow: 5px 5px 5px #606060;
+	border-radius: 2px;
+	width: 460px;
+	height: 332px;
+
+	
+}
+
 .videoMarco{
 	width: 680px;
 	height: 360;
-	position: absolute;
-	top: 248px;
-	left: 37.5px;
+	position: relative;
 	border: 2px solid #000;
 	border-radius: 3px;
 	box-shadow: 2px 2px 2px #606060;
 	background: #333333;
+	display: grid;
 	
 }
 
 .imagenVideo {
-	position:  absolute;;
-	top:370;
-	left:210;
+ place-self: center;
 }
 
 
@@ -138,6 +139,8 @@ nav ul li a:hover{
 	color: #00A6D6;
 }
 
+
+
 footer {
 
 	background-color: black;
@@ -148,5 +151,5 @@ footer {
 	padding: 50px;
 	width: 100%;
 	position: absolute;
-	bottom: -200px;
+	
 }

@@ -20,10 +20,11 @@
 	
 }
 
-.Titulos {
+header {
 	font: bold;
 	font-size: 20px;
 	font-family: Roboto;
+	display: flex;
 	padding-top: 50px;
 	padding-bottom: 30px;
 	height: 80px;
@@ -33,6 +34,18 @@
 	text-shadow: 1px 1px 1px #000;
 
 }
+.Logo {
+	position: relative;
+	width: 150px;
+	height: 100px;
+}
+
+.camara{
+	position: relative;
+	width: 150px;
+	height: 100px;
+}
+
 
 .videoMarco{
 	width: 680px;
@@ -53,19 +66,7 @@
 	left:210;
 }
 
-.Logo {
-	position: absolute;
-	left: 1200px;
-	top: 0px;
-	width: 10px;
-	height: 15px;
-}
 
-.camara{
-	position: absolute;
-	top:30px;
-	left: 38px;
-}
 
 .info span{
 	

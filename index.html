@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Prototipo v3.1 p5.js</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="estilos.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    </head>
+
+    <body background="images\3254309.jpg">
+        <div class="Titulos">
+            <center>
+            <h1>CONTADOR DE OBJETOS EN TIEMPO REAL</h1>
+            <h3>CON ML5.JS</h3>
+            </center>
+        </div>
+
+        <header>
+          <center>
+          <nav>
+            <ul>
+              <center>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="Guia.html">Guía</a></li>
+              <li><a href="https://ml5js.org/">Documentación</a></li>
+               </center>
+            </ul>
+          </nav>
+        </center>
+        </header>
+
+        <div class="info">
+        <br>
+        <center><font size="5"><p id='estado'>Carga modelo...</p></font></center><br/><br><br>
+        <p>
+            En este video se muestra:  <strong> <br/><br/>
+            <center><span id="resultado">...</span></center></strong><br/><br/>
+
+            El numero de objetos dectetados es: <strong><br/><br/><br>
+            <center><span id="num_person" class="contador"></span></center></strong><br/>
+        </p>
+        </div>
+
+
+        <div class="videoMarco">
+          <p></p>
+        </div>
+
+        <div class="imagenVideo"><img src="images\permitir.png"></div>
+        <div class="Logo"><img src="images\UAO-logo-acreditacion.png" width="100" height="100"></div>
+        <div class="camara"><img src="images\camara.png" width="150" height="100"></div>
+
+        <script>
+
+            // Definimos variables
+            let video;
+            let yolo;
+            let status;
+            let objects = [];
+            let resultado;
+            var canvas;
+
+            function setup() {
+              canvas= createCanvas(680,360);
+              canvas.position(40,250);
+              video = createCapture(VIDEO);
+              video.size(680,360);
+              
+
+              // Create a YOLO method
+              yolo = ml5.YOLO(video, startDetecting);
+
+              // Hide the original video
+              video.hide();
+              status = select('#estado');
+            }
+
+            function draw() {
+              image(video, 0, 0, width, height);
+              for (let i = 0; i < objects.length; i++) {
+                noStroke();
+                fill(0, 255, 0);
+                text(objects[i].label, objects[i].x * width, objects[i].y * height - 5);
+                noFill();
+                strokeWeight(4);
+                stroke(0, 255, 0);
+                rect(objects[i].x * width, objects[i].y * height, objects[i].w * width, objects[i].h * height);
+              }
+            }
+
+            function startDetecting() {
+              status.html('Modelo cargado!');
+              detect();
+            }
+
+            function detect() {
+              yolo.detect(function(err, results) {
+                objects = results;
+                detect();
+
+                for (var i = 0; i < objects.length; i++) {
+                  
+                select('#resultado').html(objects[i].label);
+                  if(objects[i].label=="person"){
+                    select('#num_person').html(objects.length);
+                  }
+                }
+              });
+            }
+        </script>
+    
+    </body>
+
+    <footer>
+      <center>
+      <p>
+        Esta pagina fue creada con fines educativos por Iván D Duque<br> 
+        Instagram: @ivandduque<br>
+        GitHub: @iDuqueZ
+      </p>
+      </center>
+    </footer>
+
+</html>

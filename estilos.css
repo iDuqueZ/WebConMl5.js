@@ -10,8 +10,8 @@ header {
 	font-family: Roboto;
 	display: flex;
 	justify-content: space-around;
-	padding-top: 40px;
-	padding-bottom:40px;
+	padding-top: 20px;
+	padding-bottom:60px;
 	height: 60px;
 	width: 100%;
 	background: #00A6D6;
@@ -94,7 +94,7 @@ nav ul li a:hover{
 
 .imagenVideo{
 	place-self: center;
-	
+
 }
 
 

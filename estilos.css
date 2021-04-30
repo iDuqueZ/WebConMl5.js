@@ -91,10 +91,11 @@ nav ul li a:hover{
 	
 }
 
-.imagenVideo {
- place-self: center;
-}
 
+.imagenVideo{
+	place-self: center;
+	
+}
 
 
 .info span{
